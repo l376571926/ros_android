@@ -112,6 +112,9 @@ export OUTPUT_DIR="$prefix"
 export TARGET_DIR=$OUTPUT_DIR/target
 export LIBS_DIR=$OUTPUT_DIR/libs
 source $SCRIPT_DIR/utils.sh
+# install packages
+apt-get install python-wstool -y
+apt-get install libtool libtool-bin -y
 
 if [[ $skip -eq 1 ]]; then
    echo "-- Skiping projects update"
